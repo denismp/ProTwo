@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from appTwo import views
 
 urlpatterns = [
+    path('', views.index, name='index'),  # Equivalent of url(r'^$', ...)
     path('admin/', admin.site.urls),
 ]
